@@ -1,4 +1,4 @@
-name
+name,hp,dmg
 Tester1
 Tester2
 Tester3
