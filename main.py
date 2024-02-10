@@ -1,5 +1,5 @@
 from classes.character import Character
-from classes.item import Item
+from classes.items.item import Item
 
 character_import_file = 'csv/characters.csv'
 Character.instantiate_from_csv(character_import_file)
