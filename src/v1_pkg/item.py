@@ -37,6 +37,13 @@ class Item:
     @description.setter
     def description(self, description_value) -> None:
         self.__description = description_value
+    
+    @property
+    def weight(self) -> float:
+        return self.__weight
+    @weight.setter
+    def weight(self, weight_value) -> None:
+        self.__weight = weight_value
 
     def __repr__(self) -> str:
         return f"""{self.__class__.__name__}('{self.__name}')"""

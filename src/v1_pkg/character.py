@@ -1,17 +1,21 @@
 import csv
+from inventory import Inventory
 
 class Character:
     all_characters = []
     ##### Initializers
     def __init__(self, 
                  name: str, 
+                 inventory: Inventory,
                  hp: int = 0, 
-                 dmg: int = 0):
+                 dmg: int = 0
+                 ):
         if hp:
             assert hp >= 0, f"{name} HP should be greater than or equal to zero."
         if dmg:
             assert dmg >= 0, f"{name} DMG should be greater than or equal to zero."
         self.__name = name
+        self.__inventory = inventory
         self.__hp = hp
         self.__dmg = dmg
         Character.all_characters.append(self)
