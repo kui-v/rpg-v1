@@ -26,15 +26,23 @@ class Inventory:
     
 
     ##### Methods
-    def get_inventory_weight(self) -> float:
+    def get_weight(self) -> float:
         weight: float = 0.0
         for item in self.__inventory:
             weight += item.weight
         return weight
 
-    def add_to_inventory(self, item: Item) -> bool:
-        if item.weight + self.get_inventory_weight() <= self.__capacity:
+    def add(self, item: Item) -> bool:
+        if item.weight + self.get_weight() <= self.__capacity:
             self.__inventory.append(item)
             return True
         else:
+            return False
+    
+    def remove(self, item: Item) -> bool:
+        try:
+            self.__inventory.remove(item)
+            return True
+        except Exception as e:
+            print(e)
             return False

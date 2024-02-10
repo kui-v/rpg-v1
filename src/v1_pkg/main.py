@@ -21,6 +21,10 @@ from inventory import Inventory
 sword = Item('sword','equippable','just a sword',5.0)
 
 inv = Inventory(10)
-print(inv.get_inventory_weight())
-inv.add_to_inventory(sword)
-print(inv.get_inventory_weight())
+print(inv.get_weight())
+# inv.add_to_inventory(sword)
+# print(inv.get_inventory_weight())
+char = Character('Tester', inv, 10, 2)
+print(char.inventory.get_weight())
+char.inventory.add(sword)
+print(char.inventory.get_weight())
