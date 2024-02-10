@@ -7,7 +7,7 @@ class Character:
     def __init__(self, 
                  name: str, 
                  inventory: Inventory,
-                 hp: int = 0, 
+                 hp: int = 0,
                  dmg: int = 0
                  ):
         if hp:
@@ -42,6 +42,13 @@ class Character:
     @dmg.setter
     def dmg(self, dmg_value: int) -> None:
         self.__dmg = dmg_value
+
+    @property
+    def inventory(self) -> Inventory:
+        return self.__inventory
+    @inventory.setter
+    def inventory(self, inventory_value: Inventory) -> None:
+        self.__inventory = inventory_value
 
     def __repr__(self) -> str:
         return f"""{self.__class__.__name__}('{self.__name}')"""

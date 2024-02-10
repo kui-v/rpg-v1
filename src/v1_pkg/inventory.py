@@ -32,7 +32,6 @@ class Inventory:
             weight += item.weight
         return weight
 
-        
     def add_to_inventory(self, item: Item) -> bool:
         if item.weight + self.get_inventory_weight() <= self.__capacity:
             self.__inventory.append(item)
