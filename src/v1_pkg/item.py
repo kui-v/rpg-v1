@@ -6,11 +6,13 @@ class Item:
     def __init__(self,
                  name: str,
                  item_type: str,
-                 description: str):
+                 description: str,
+                 weight: float = 0):
         assert item_type in ('consumable', 'equippable'), f"{name} should be a consumable or equippable--not {item_type}"
         self.__name = name
         self.__item_type = item_type
         self.__description = description
+        self.__weight = weight
         Item.all_items.append(self)
     
 
@@ -52,5 +54,6 @@ class Item:
             Item(
                 name=item.get('name'),
                 item_type=item.get('item_type'),
-                description=item.get('description')
+                description=item.get('description'),
+                weight=item.get('weight')
             )

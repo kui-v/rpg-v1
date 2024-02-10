@@ -1,4 +1,4 @@
-name,item_type,description
-potion,consumable,"Restores 20% of your health."
-sword,equippable,"Just a sword."
-"cat toy",equippable,"A cat toy."
+name,item_type,description,weight
+potion,consumable,"Restores 20% of your health.",.5
+sword,equippable,"Just a sword.",3
+"cat toy",equippable,"A cat toy.",.25

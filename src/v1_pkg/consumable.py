@@ -5,10 +5,11 @@ class Consumable(Item):
     def __init__(self,
                  name: str,
                  description: str,
+                 weight: float,
                  effect_type: str,
                  effect_modifier: float):
         super().__init__(
-            name, 'consumable', description
+            name, 'consumable', description, weight
         )
         assert effect_modifier > 0, f"{name} must be a value greater than zero."
         self.__effect_type = effect_type

@@ -5,10 +5,11 @@ class Equippable(Item):
     def __init__(self, 
                  name: str,
                  description: str,
+                 weight: float,
                  durability: int = 0,
                  damage: int = 0):
         super().__init__(
-            name, 'equippable', description
+            name, 'equippable', description, weight
         )
         assert durability >= 0, f"{name} cannot have durability less than zero."
         self.__durability = durability
