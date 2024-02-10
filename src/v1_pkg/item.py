@@ -9,6 +9,7 @@ class Item:
                  description: str,
                  weight: float = 0):
         assert item_type in ('consumable', 'equippable'), f"{name} should be a consumable or equippable--not {item_type}"
+        assert weight >= 0, f"{name} should have a weight greater than or equal to zero."
         self.__name = name
         self.__item_type = item_type
         self.__description = description
