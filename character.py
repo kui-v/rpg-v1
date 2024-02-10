@@ -7,6 +7,10 @@ class Character:
                  name: str, 
                  hp: int = 0, 
                  dmg: int = 0):
+        if hp:
+            assert hp >= 0, f"{name} HP should be greater than or equal to zero."
+        if dmg:
+            assert dmg >= 0, f"{name} DMG should be greater than or equal to zero."
         self.__name = name
         self.__hp = hp
         self.__dmg = dmg
@@ -49,5 +53,7 @@ class Character:
         f.close()
         for character in characters:
             Character(
-                name=character.get('name')
+                name=character.get('name'),
+                hp=int(character.get('hp')),
+                dmg=int(character.get('dmg'))
             )
