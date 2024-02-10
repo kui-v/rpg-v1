@@ -1,4 +1,4 @@
-from classes.items.item import Item
+from item import Item
 
 class Consumable(Item):
     # Initializers

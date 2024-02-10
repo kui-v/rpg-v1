@@ -1,7 +1,14 @@
+# import sys
+# sys.path.append('/Users/vance/Projects/rpg-v1/src/items')
+# for path in sys.path:
+#     print(path)
+
 # from classes.character import Character
 # from classes.items.item import Item
-from classes.items.equippable import Equippable
-from classes.items.consumable import Consumable
+# import sys,os
+# sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)),os.pardir))
+from equippable import Equippable
+from consumable import Consumable
 
 # character_import_file = 'csv/characters.csv'
 # Character.instantiate_from_csv(character_import_file)
