@@ -42,7 +42,7 @@ class Item:
 
     ##### Class methods
     @classmethod
-    def instantiate_from_csv(cls, file):
+    def instantiate_from_csv(cls, file) -> None:
         items = []
         with open(file) as f:
             reader = csv.DictReader(f)
