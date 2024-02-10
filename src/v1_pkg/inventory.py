@@ -37,6 +37,7 @@ class Inventory:
             self.__inventory.append(item)
             return True
         else:
+            print(f'Could not add {item.name} to inventory.')
             return False
     
     def remove(self, item: Item) -> bool:
@@ -44,5 +45,5 @@ class Inventory:
             self.__inventory.remove(item)
             return True
         except Exception as e:
-            print(e)
+            print(f'Could not remove {item.name} from inventory.')
             return False
