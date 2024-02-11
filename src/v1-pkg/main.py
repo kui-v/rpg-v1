@@ -19,6 +19,7 @@ from inventory import Inventory
 # print(con.effect_type)
 
 sword = Item('sword','equippable','just a sword',5.0)
+legendary_sword = Item('legendary sword', 'equippable', 'a sword that you should not have', 20)
 
 inv = Inventory(10)
 print(inv.get_weight())
@@ -27,4 +28,9 @@ print(inv.get_weight())
 char = Character('Tester', inv, 10, 2)
 print(char.inventory.get_weight())
 char.inventory.add(sword)
+print(char.inventory.get_weight())
+char.inventory.remove(sword)
+print(char.inventory.get_weight())
+char.inventory.remove(legendary_sword)
+char.inventory.add(legendary_sword)
 print(char.inventory.get_weight())

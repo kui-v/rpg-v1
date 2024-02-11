@@ -68,3 +68,7 @@ class Character:
                 hp=int(character.get('hp')),
                 dmg=int(character.get('dmg'))
             )
+
+    ##### Instance methods
+    def take_damage(self, damage_amount) -> None:
+        self.__hp -= damage_amount
